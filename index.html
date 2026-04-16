@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>VMS V1-GitHub Edition</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #0f172a; }
-        iframe { width: 100%; height: 100%; border: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0f172a">
+  
+  <title>VMS V1 App</title>
+  
+  <style>
+    /* 어플처럼 보이기 위해 화면 고정 */
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
+    /* 구글 배포 주소를 담을 컨테이너 */
+    iframe { width: 100%; height: 100%; border: none; }
+  </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbzdEKhnTK6nlVp__g8lZKsHQTlVoa80c0lapADy-SyyOIkV2GKJx9YGLGxgeJvHXn-A1g/exec"></iframe>
-    <iframe 
-  src="https://script.google.com/macros/s/AKfycbzdEKhnTK6nlVp__g8lZKsHQTlVoa80c0lapADy-SyyOIkV2GKJx9YGLGxgeJvHXn-A1g/exec"
-  style="width:100%; height:100%; border:none;"
-  sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-modals"
-  allow="geolocation; microphone; camera">
-</iframe>
+
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbzdEKhnTK6nlVp__g8lZKsHQTlVoa80c0lapADy-SyyOIkV2GKJx9YGLGxgeJvHXn-A1g/exec" 
+    sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-modals"
+    allow="geolocation; microphone; camera">
+  </iframe>
+
+  <script>
+    /* 아이폰에서 '홈 화면에 추가' 시 주소창을 더 확실히 가리기 위한 스크립트 
+    */
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        window.scrollTo(0, 1);
+      }, 0);
+    });
+  </script>
 </body>
 </html>
